@@ -47,7 +47,7 @@
         $tabs,
 
         // Helpers
-        index = 0,
+        index = 3,
         $slide = $this.children(),
         length = $slide.size(),
         fadeTime = parseFloat(settings.speed),

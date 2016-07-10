@@ -1,278 +1,409 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+	<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <title>Code It</title>
-
-    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css' />
-    <link rel="stylesheet" href="css/style.css" />
+	<title>Art Lemon</title>
+	<link href='https://fonts.googleapis.com/css?family=Raleway:400,900' rel='stylesheet' type='text/css' />
     <link rel="stylesheet" href="css/responsiveslides.css" />
-    <link rel="stylesheet" href="css/media.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/myStyle.css" />
+    <link rel="stylesheet" href="css/ninja-slider.css" />
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+	<link rel="stylesheet" href="css/jPushMenu.css" />
+	<link rel="stylesheet" href="css/media.css" />
 </head>
 <body>
     <!-- Header -->
-    <header> 
-        <div class="header-top">
-            <div class="container">
-                <div class="logo-wrapper pull-left">
-                    <a href="#">
-                        <img src="images/logo.png" width="200" height="47" alt="codeit">
-                    </a>
-                </div>
-                <div class="contact-us pull-right">
-                    <div class="phone">
-                        <a href="tel:+1234567890">+3 (050) 777 77 77</a>
-                        <a href="tel:+1234567890">+3 (050) 777 77 77</a>
-                    </div>
-                    <div class="feedback-wrapper">
-                        <button id="myBtn" type="button" class="feedback">Feedback</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- The Modal -->
-        <div id="myModal" class="modal">
-          <!-- Modal content -->
-            <div class="modal-content">
-                <form action="" method="post" name="test" id="form" >
-                    <span class="close"></span>
-                    <div class="modal-header">
-                        <p>Feedback</p>
-                    </div>
-                    <div class="modal-body">
-                        <div class="modal-fields">
-                            <label for="fName">Name <span>*</span></label><br />
-                            <input type="text" class="rfield" name="fName" id="fName" required pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$"/>
-                        </div>
-
-                        <div class="modal-fields">
-                            <label for="Phone">Phone<span>*</span></label><br />
-                            <input type="text" class="rfield" name="lName" id="Phone" required pattern="^(?:0|\(?\+33\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}$" />
-                        </div>
-                        <div class="modal-fields">
-                            <label for="email">Email<span>*</span></label><br />
-                            <input type="mail" class="rfield" name="email" id="emeil" required pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$" /> 
-                        </div>
-                        <div class="modal-fields comment">
-                            <label for="text">Text</label><br />
-                            <textarea name="text" class="rfield"></textarea><br />
-                        </div>
-                            <input type="submit" class="btn_submit disabled" value="Submit" />
-                    </div>
-                </form>
-            </div>  
-        </div>
-        <div class="navigation-wrapper">
-            <nav class="container desktop">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Catalog</a></li>
-                    <li><a href="#">Shipping and payment</a></li>
-                    <li><a href="#">Price</a></li>
-                    <li><a href="#">Contacts</a></li>
-                </ul>
-            </nav>
-            <nav class="mobile">
-                <button><i class="fa fa-bars" aria-hidden="true"></i></button>
-                <div>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Catalog</a></li>
-                        <li><a href="#">Shipping and payment</a></li>
-                        <li><a href="#">Price</a></li>
-                        <li><a href="#">Contacts</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
+    <header>
+    	<div class="inner-wrapper">
+		    <div class="top-header">
+				<ul class="login pull-right">
+					<li><a href="#">Login</a></li>
+					<li><a href="#">Login</a></li>
+				</ul>
+			</div>
+			<div class="bottom-header">
+			<button class="toggle-menu menu-left"><i class="fa fa-bars" aria-hidden="true"></i></button>
+				<nav class="about pull-left">
+					<ul class="parent-menu">
+						<li class="products-menu"><span><i class="fa fa-bars" aria-hidden="true"></i>Products</span></li>
+						<li><a href="">Home</a></li>
+						<li><a href="">About us</a></li>
+						<li><a href="">Useful information</a></li>
+					</ul>
+				</nav>
+				<div class="logo">
+	    			<img src="images/logo.png" alt="logo">
+	    		</div>
+	    		<nav class="info pull-right">
+					<ul class="parent-menu">
+						<li><a href="">Terms of Trade</a></li>
+						<li><a href="">Delivery</a></li>
+						<li><a href="">Location</a></li>
+						<li><a href="">Contact us</a></li>
+					</ul>
+	    		</nav>
+	    		<div class="cart">
+	    			<a href=""><img src="images/cart.png" alt=""></a>
+	    			<span>56</span>
+	    		</div>
+			</div> 
+		</div>   	
     </header>
-    <div class="slider">
-        <ul class="rslides" id="slider2">
-            <li><a href="#"><img src="images/slide1.png" alt=""></a></li>
-            <li><a href="#"><img src="images/slide1.png" alt=""></a></li>
-            <li><a href="#"><img src="images/slide1.png" alt=""></a></li>
-        </ul>
-    </div>
-    <div class="breadcrumbs">
-        <ul class="container">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Catalog</a></li>
-            <li>Category Name</li>
-        </ul>
-    </div>
-    <div class="main-wrapper container">
-        <div class="left-block">
-            <nav>
-                <ul>
-                    <li><a href="">Cars</a></li>
-                    <li class="with-sub-menu">
-                        <span>Household Appliances</span>
-                        <ul class="sub-menu">
-                            <li><a href="">Microwaves</a></li>
-                            <li><a href="">Fridges</a></li>
-                            <li><a href="">Посудомоечные машины</a></li>
-                            <li><a href="">Dishwashers</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="">Mobile Equipment</a></li>
-                    <li><a href="">Computers</a></li>
-                    <li><a href="">Clothing</a></li>
-                    <li><a href="">Real Estate</a></li>
-                </ul>
-            </nav>
-            <div class="file"><a href="#"><img src="images/file.png" alt=""><span>Price List</span></a></div>
-        </div>
-        <div class="center-block">
-            <div class="content-slider">
-                <div class="contant-slide">
-                    <div class="item">
-                        <div class="item-container">
-                            <div>
-                                <img src="images/products.png" alt="">
-                                <p>Lorem ipsum dolor sit amet, consectetur doler adipiscing elit.</p>
-                            </div>
-                            <div class="price-block">
-                                <div class="price">
-                                    <span>$</span>
-                                    <span>550.95</span>
-                                </div>
-                                <div class="cart">
-                                    <a href="#" class="add-to-cart"><img src="images/addToCart.png" alt=""></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="item-container">
-                            <div>
-                                <img src="images/products.png" alt="">
-                                <p>Lorem ipsum dolor sit amet, consectetur doler adipiscing elit.</p>
-                            </div>
-                            <div class="price-block">
-                                <div class="price">
-                                    <span>$</span>
-                                    <span>350.95</span>
-                                </div>
-                                <div class="cart">
-                                    <a href="#" class="add-to-cart"><img src="images/addToCart.png" alt=""></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="item-container">
-                            <div>
-                                <img src="images/products.png" alt="">
-                                <p>Lorem ipsum dolor sit amet, consectetur doler adipiscing elit.</p>
-                            </div>
-                            <div class="price-block">
-                                <div class="price">
-                                    <span>$</span>
-                                    <span>850.95</span>
-                                </div>
-                                <div class="cart">
-                                    <a href="#" class="add-to-cart"><img src="images/addToCart.png" alt=""></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="item-container">
-                            <div>
-                                <img src="images/products.png" alt="">
-                                <p>Lorem ipsum dolor sit amet, consectetur doler adipiscing elit.</p>
-                            </div>
-                            <div class="price-block">
-                                <div class="price">
-                                    <span>$</span>
-                                    <span>550.95</span>
-                                </div>
-                                <div class="cart">
-                                    <a href="#" class="add-to-cart"><img src="images/addToCart.png" alt=""></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="item-container">
-                            <div>
-                                <img src="images/products.png" alt="">
-                                <p>Lorem ipsum dolor sit amet, consectetur doler adipiscing elit.</p>
-                            </div>
-                            <div class="price-block">
-                                <div class="price">
-                                    <span>$</span>
-                                    <span>350.95</span>
-                                </div>
-                                <div class="cart">
-                                    <a href="#" class="add-to-cart"><img src="images/addToCart.png" alt=""></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="item-container">
-                            <div>
-                                <img src="images/products.png" alt="">
-                                <p>Lorem ipsum dolor sit amet, consectetur doler adipiscing elit.</p>
-                            </div>
-                            <div class="price-block">
-                                <div class="price">
-                                    <span>$</span>
-                                    <span>850.95</span>
-                                </div>
-                                <div class="cart">
-                                    <a href="#" class="add-to-cart"><img src="images/addToCart.png" alt=""></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="pagination">
-                <ul>
-                    <li><a href="">1</a></li>
-                    <li><a href="">2</a></li>
-                    <li><a href="">3</a></li>
-                    <li><a href="">4</a></li>
-                    <li><a href="">5</a></li>
-                    <li><a href="">6</a></li>
-                    <li><a href="">7</a></li>
-                </ul>
-            </div>
-             <section class="container description">
-                <div  class="description-conteiner pull-left">  
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper lacinia auctor. Aliquam vitae mi ornare, tincidunt risus sed, euismod nisl. Nullam imperdiet nisi ut est imperdiet posuere. Cras sodales molestie enim eget porta. Vestibulum scelerisque blandit pulvinar. Donec condimentum malesuada neque a blandit. In sodales ex ac pharetra dictum. In interdum facilisis justo. Maecenas sit amet mi vitae purus ultrices fermentum. In vel orci erat. Suspendisse potenti. Donec arcu nunc, imperdiet id neque nec, mollis viverra nisl. Fusce egestas ligula vitae tristique dignissim.</p>
-                </div>
-                <div class="description-conteiner pull-right">  
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper lacinia auctor. Aliquam vitae mi ornare, tincidunt risus sed, euismod nisl. Nullam imperdiet nisi ut est imperdiet posuere. Cras sodales molestie enim eget porta. Vestibulum scelerisque blandit pulvinar. Donec condimentum malesuada neque a blandit. In sodales ex ac pharetra dictum. In interdum facilisis justo. Maecenas sit amet mi vitae purus ultrices fermentum. In vel orci erat. Suspendisse potenti. Donec arcu nunc, imperdiet id neque nec, mollis viverra nisl. Fusce egestas ligula vitae tristique dignissim.</p>
-                </div>
-            </section>
-        </div>
-    </div>
-    <!-- Footer -->
-    <footer class="main-footer container">
-        <div class="copy pull-left">
-             <span>© CodeIT 2012–2013,</br>
-                All Rights Reserved. 
-            </span>
-        </div>
-        <div class="footer-wrapper pull-right">
-            <nav class="footer-menu">
-                <a href="#">Home</a>
-                <a href="#">Catalog</a>
-                <a href="#">Shipment and payment</a>
-                <a href="#">Price</a>
-                <a href="#">Contacts</a>
-            </nav>
-        </div>
-    </footer>
+	<section>
+		<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left">
+			<h3>Menu</h3>
+			<ul>
+				<li class="products-menu"><a>Products</a></li>
+				<li><a href="">Home</a></li>
+				<li><a href="">About us</a></li>
+				<li><a href="">Useful information</a></li>
+				<li><a href="">Terms of Trade</a></li>
+				<li><a href="">Delivery</a></li>
+				<li><a href="">Location</a></li>
+				<li><a href="">Contact us</a></li>
+			</ul>
+		</nav>
+		<div class="hidden">
+    		<div>
+    			<p>Products</p>
+    			<button></button>
+    		</div>
+    		<ul class="hidden-menu">
+				<li><a href="">For the Home (Household)</a></li>
+				<li><a href="">Home Office<span class="left-arrow"></span></a></li>
+				<li><a href="">Baby, Kids & toys<span class="left-arrow"></span></a>
+					<ul class="hidden-sub-menu">
+						<div class="header-menu-container">					    			
+			    			<button></button>
+			    		</div>
+						<li><a href="">Baby Gear (коляски)<span class="left-arrow"></span></a></li>
+						<li><a href="">Toys<span class="left-arrow"></span></a>
+							<ul>
+								<div class="header-menu-container">					    			
+					    			<button></button>
+					    		</div>
+								<li><a href="">Arts, Crafts & Hobby</a></li>
+								<li><a href="">Building Sets & Blocks</a></li>
+								<li><a href="">Infant & Preschool </a></li>
+								<li><a href="">Educational</a></li>
+								<li><a href="">Remote Control & Ride-on's </a></li>
+								<li><a href="">Electronics & Tech Toys</a></li>
+								<li><a href="">Plush Toys</a></li>
+								<li><a href="">Pretend Play</a></li>
+								<li><a href="">Outdoor Play</a></li>
+								<li><a href="">Dolls</a></li>
+								<li><a href="">Dollhouses</a></li>
+								<li><a href="">Gun</a></li>
+								<li><a href="">Batteries </a></li>
+								<li><a href="">Other</a></li>
+							</ul>
+						</li>
+						<li><a href="">Daycare & Learning<span class="left-arrow"></span></a></li>
+					</ul>
+				</li>
+				<li><a href="">Patio & Outdoors<span class="left-arrow"></span></a></li>
+				<li><a href="">Clothing & Accessories<span class="left-arrow"></span></a></li>
+				<li><a href="">Sports & Fitness<span class="left-arrow"></span></a></li>
+				<li><a href="">Pet Supplies<span class="left-arrow"></span></a></li>
+				<li><a href="">Gifting & Occasions<span class="left-arrow"></span></a></li>
+				<li><a href="">Auto</a></li>
+				<li><a href="">Garment</a></li>
+				<li><a href="">Souvenirs</a></li>
+				<li><a href="">POS Materials</a></li>
+			</ul>
+    	</div>
+		<div class="slider">
+	        <ul class="rslides" id="slider2">
+	         	<li><img src="images/MainSlide.png" alt=""></li>
+	          	<li><img src="images/MainSlide.png" alt=""></li>
+	            <li><img src="images/MainSlide.png" alt=""></li>
+	            <li><img src="images/slide2.png" alt=""></li>
+	            <li><img src="images/slide2.png" alt=""></li>
+	        </ul>
+	    </div>
+		<div class="arrowDown" id="menu">
+	    	<a href="#main"><img src="images/arrow-down.png" alt=""></a>		
+		</div>   
+	</section>
+	
+	<div class="products container" id="main">
+		<div class="caption">
+			<span>Products</span>
+			<p>Products</p>
+		</div>
+		<div class="main-wrapper">
+			    <div class="left-block">
+		            <nav>
+		            	<p>Select a category</p>
+		                <ul>
+		                    <li class="with-sub-menu">
+		                    	<span>For the Home (Household)</span><span class="ui-arrow"></span>
+		                        <ul class="sub-menu">
+		                            <li><a href="">Laundry and Bathroom</a></li>
+		                            <li><a href="">Kitchen & Dining</a></li>
+		                            <li><a href="">Home Decor & Improvement</a></li>
+		                        </ul>
+		                    </li>
+		                  <li class="with-sub-menu">
+		                    	<span>Home Office</span><span class="ui-arrow"></span>
+		                        <ul class="sub-menu">
+		                            <li><a href="">Laundry and Bathroom</a></li>
+		                            <li><a href="">Kitchen & Dining</a></li>
+		                            <li><a href="">Home Decor & Improvement</a></li>
+		                        </ul>
+		                    </li>
+		                    <li class="with-sub-menu">
+		                        <span>Baby, Kids & toys</span><span class="ui-arrow"></span>
+		                        <ul class="sub-menu">
+		                            <li><a href="">Laundry and Bathroom</a></li>
+		                            <li><a href="">Kitchen & Dining</a></li>
+		                            <li><a href="">Home Decor & Improvement</a></li>
+		                        </ul>
+		                    </li>
+		                    <li class="with-sub-menu">
+		                    	<span>Clothing & Accessories</span><span class="ui-arrow"></span>
+		                        <ul class="sub-menu">
+		                            <li><a href="">Laundry and Bathroom</a></li>
+		                            <li><a href="">Kitchen & Dining</a></li>
+		                            <li><a href="">Home Decor & Improvement</a></li>
+		                        </ul>
+		                    </li>
+		                    <li class="with-sub-menu">
+		                    	<span>Sports & Fitness</span><span class="ui-arrow"></span>
+		                        <ul class="sub-menu">
+		                            <li><a href="">Laundry and Bathroom</a></li>
+		                            <li><a href="">Kitchen & Dining</a></li>
+		                            <li><a href="">Home Decor & Improvement</a></li>
+		                        </ul>
+		                    </li>
+		                    <li class="with-sub-menu">
+		                    	<span>Pet Supplies</span><span class="ui-arrow"></span>
+		                        <ul class="sub-menu">
+		                            <li><a href="">Laundry and Bathroom</a></li>
+		                            <li><a href="">Kitchen & Dining</a></li>
+		                            <li><a href="">Home Decor & Improvement</a></li>
+		                        </ul>
+		                    </li>
+		                    <li class="with-sub-menu">
+		                    	<div class="scroll-down"><span class="scroll-arrow"></span></div>
+		                    </li>
+		                </ul>
+		            </nav>
+		        </div>
+		        <div class="center-block">
+		        	<div class="image-show">
+		        		<img src="images/productImg.png" alt="">
+		        		<span>Why our company</span>
+		        	</div>
+		        	<div class="description">
+		        		<p class="mCustomScrollbar" data-mcs-theme="dark">
+							Dummy text is text that is used in the publishing industry or by web designers to occupy the space which will later be filled with 'real' content. This is required when, for example, the final text is not yet available. Dummy text is also known as 'fill text'.It is said that song composers of the past used dummy texts as lyrics when writing melodies in order to have a 'ready-made' text to sing with the melody. Dummy texts have been in use by typesetters since the 16th century. Dummy text is text that is used in the publishing industry or by web designers to occupy the space which will later be filled with 'real' content. </br>
+							Dummy text is text that is used in the publishing industry or by web designers to occupy the space which will later be filled with 'real' content. This is required when, for example, the final text is not yet available. Dummy text is also known as 'fill text'.It is said that song composers of the past used dummy texts as lyrics when writing melodies in order to have a 'ready-made' text to sing with the melody. Dummy texts have been in use by typesetters since the 16th century. Dummy text is text that is used in the publishing industry or by web designers to occupy the space which will later be filled with 'real' content. 
+		        		</p>
+		        		<button>Open Category</button>
+		        	</div>		        	
+		        </div>
+	    </div>
+	</div>
 
-    <script src="js/jquery.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/responsiveslides.js"></script>
+	<div class="trigger" id="ex4">
+		<div class="caption">
+			<span>Why our company</span>
+			<p>Why our company</p>
+		</div>
+		<div class="container">			
+			<div class="trigger-item">
+				<div class="left-image">
+					<img src="images/shapes1.png" alt="">
+				</div>				
+				<img class="img-wrapper" src="images/1.png" alt="">				
+				<div class="right-image"><img src="images/shapes2.png" alt=""></div>
+				<p>The most well-known dummy text is the 'Lorem Ipsum',
+					which is said to have originated in the</p>
+			</div>
+			<div class="trigger-item">
+				<div class="left-image">
+					<img src="images/shapes1.png" alt="">
+				</div>			
+					<img class="img-wrapper" src="images/500.png" alt="">				
+				<div class="right-image">
+					<img src="images/shapes2.png" alt="">
+				</div>
+				<p>The most well-known dummy text is the 'Lorem Ipsum',
+					which is said to have originated in the</p>
+			</div>
+			<div class="trigger-item">
+				<div class="left-image">
+					<img src="images/shapes1.png" alt="">
+				</div>				
+					<img class="img-wrapper" src="images/250.png" alt="">				
+				<div class="right-image">
+					<img src="images/shapes2.png" alt="">
+				</div>
+				<p>The most well-known dummy text is the 'Lorem Ipsum',
+					which is said to have originated in the</p>
+			</div>
+			<div class="trigger-item">
+				<div class="left-image">
+					<img src="images/shapes1.png" alt="">
+				</div>				
+					<img class="img-wrapper" src="images/80.png" alt="">				
+				<div class="right-image">
+					<img src="images/shapes2.png" alt="">
+				</div>
+				<p>The most well-known dummy text is the 'Lorem Ipsum',
+					which is said to have originated in the</p>
+			</div>
+			<div class="trigger-item">
+				<div class="left-image">
+					<img src="images/shapes1.png" alt="">
+				</div>			
+					<img class="img-wrapper" src="images/10.png" alt="">				
+				<div class="right-image">
+					<img src="images/shapes2.png" alt="">
+				</div>
+				<p>The most well-known dummy text is the 'Lorem Ipsum',
+					which is said to have originated in the</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="slider-wrapper">
+		<div class="caption">
+			<span>Steps to work with us</span>
+			<p>Steps to work with us</p>
+		</div>
+		<div class="container">
+			<div id="ninja-slider">
+		        <div class="slider-inner">
+		            <ul>
+		                <li>
+		                    <div class="content">
+			                    <div class="text-wrapper">
+					          		<span>Why our company</span>
+					          		<p>Lorem Ipsum is composed in a pseudo-Latin language which more or less corresponds to 'proper' Latin. It contains a series of real Latin words.</p>
+				          		</div>
+			                    <img src="images/anotherSlide.png" />
+			                    <div class="description-wrapper">
+				          			<span>Why our company</span>
+				          			<p class="mCustomScrollbar" data-mcs-theme="dark">Dummy text is text that is used in the publishing industry or by web designers to occupy the space which will later be filled with 'real' content. This is required when, for example, the final text is not yet available. Dummy text is also known as 'fill text'.<br>
+									It is said that song composers of the past used dummy texts as lyrics when writing melodies in order to have a 'ready-made' text to sing with the melody. Dummy texts have been in use by typesetters since the 16th century.</p>
+					          	</div> 
+					        </div> 
+		                </li>
+		                <li>
+		                    <div class="content">
+			                    <div class="text-wrapper">
+					          		<span>Why our company</span>
+					          		<p>Lorem Ipsum is composed in a pseudo-Latin language which more or less corresponds to 'proper' Latin. It contains a series of real Latin words.</p>
+				          		</div>
+			                    <img src="images/anotherSlide.png" />
+			                    <div class="description-wrapper">
+				          			<span>Why our company</span>
+				          			<p class="mCustomScrollbar" data-mcs-theme="dark">Dummy text is text that is used in the publishing industry or by web designers to occupy the space which will later be filled with 'real' content. This is required when, for example, the final text is not yet available. Dummy text is also known as 'fill text'.<br>
+									It is said that song composers of the past used dummy texts as lyrics when writing melodies in order to have a 'ready-made' text to sing with the melody. Dummy texts have been in use by typesetters since the 16th century.</p>
+					          	</div>
+					        </div> 
+		                </li>
+		                <li>
+		                    <div class="content">
+			                    <div class="text-wrapper">
+					          		<span>Why our company</span>
+					          		<p>Lorem Ipsum is composed in a pseudo-Latin language which more or less corresponds to 'proper' Latin. It contains a series of real Latin words.</p>
+				          		</div>
+			                    <img src="images/anotherSlide.png" />
+			                    <div class="description-wrapper">
+				          			<span>Why our company</span>
+				          			<p class="mCustomScrollbar" data-mcs-theme="dark">Dummy text is text that is used in the publishing industry or by web designers to occupy the space which will later be filled with 'real' content. This is required when, for example, the final text is not yet available. Dummy text is also known as 'fill text'.<br>
+									It is said that song composers of the past used dummy texts as lyrics when writing melodies in order to have a 'ready-made' text to sing with the melody. Dummy texts have been in use by typesetters since the 16th century.</p>
+					          	</div>
+					        </div>  
+		                </li>
+		                <li>
+		                    <div class="content">
+			                    <div class="text-wrapper">
+					          		<span>Why our company</span>
+					          		<p>Lorem Ipsum is composed in a pseudo-Latin language which more or less corresponds to 'proper' Latin. It contains a series of real Latin words.</p>
+				          		</div>
+			                    <img src="images/anotherSlide.png" />
+			                    <div class="description-wrapper">
+				          			<span>Why our company</span>
+				          			<p class="mCustomScrollbar" data-mcs-theme="dark">Dummy text is text that is used in the publishing industry or by web designers to occupy the space which will later be filled with 'real' content. This is required when, for example, the final text is not yet available. Dummy text is also known as 'fill text'.<br>
+									It is said that song composers of the past used dummy texts as lyrics when writing melodies in order to have a 'ready-made' text to sing with the melody. Dummy texts have been in use by typesetters since the 16th century.</p>
+					          	</div>
+				          	</div>
+		                </li>
+		                <li>
+		                    <div class="content">
+			                    <div class="text-wrapper">
+					          		<span>Why our company</span>
+					          		<p>Lorem Ipsum is composed in a pseudo-Latin language which more or less corresponds to 'proper' Latin. It contains a series of real Latin words.</p>
+				          		</div>
+			                    <img src="images/anotherSlide.png" />
+			                    <div class="description-wrapper">
+				          			<span>Why our company</span>
+				          			<p class="mCustomScrollbar" data-mcs-theme="dark">Dummy text is text that is used in the publishing industry or by web designers to occupy the space which will later be filled with 'real' content. This is required when, for example, the final text is not yet available. Dummy text is also known as 'fill text'.<br>
+									It is said that song composers of the past used dummy texts as lyrics when writing melodies in order to have a 'ready-made' text to sing with the melody. Dummy texts have been in use by typesetters since the 16th century.</p>
+					          	</div> 
+					        </div>
+		                </li>
+		            </ul>
+			    </div>
+		    </div>
+		</div>
+	</div>
+
+	<div class="partners">
+		<div class="caption">
+			<span>Our partners</span>
+			<p>Our partners</p>
+		</div>
+		<div class="partners-wrapper">
+			<ul class="">
+				<li><a href=""><img src="images/partner1.png" alt=""></a></li>
+				<li><a href=""><img src="images/partner2.png" alt=""></a></li>
+				<li><a href=""><img src="images/partner3.png" alt=""></a></li>
+				<li><a href=""><img src="images/partner4.png" alt=""></a></li>
+				<li><a href=""><img src="images/partner5.png" alt=""></a></li>
+			</ul>
+			<button>Cooperate</button>
+		</div>
+	</div>
+
+	<footer>
+		<div class="top-footer">
+			<div class="container">
+				<nav>
+					<ul>
+						<li><a href="">Home</a></li>
+						<li><a href="">About us</a></li>
+						<li><a href="">Delivery</a></li>
+						<li><a href="">Location</a></li>
+					</ul>
+				</nav>
+				<div class="footer-info">
+					<div class="location sprite">Po Box 2686,Queenstown, Wakatipu, 9349, NZ</div>
+					<div class="phoneNumber sprite"> <a href="tel:+64 (03) 746-71-57">+64 (03) 746-71-57</a></div>
+					<div class="email sprite"><a href="mailto:info@general-st.co.nz">info@general-st.co.nz</a></div>
+				</div>				
+			</div>
+		</div>
+		<div class="bottom-footer container">
+			<span class="copyright">2016 © All rights reserved - General ST Limited. </span>
+			<a href="">Designed by  - </a>
+		</div>
+	</footer>
+
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/responsiveslides.js"></script>
+	<script src="js/ninja-slider.js"></script>
+	<script src="js/jquery.mCustomScrollbar.js"></script>
+	<script src="js/jPushMenu.js"></script>
 </body>
 </html>

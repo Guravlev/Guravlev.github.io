@@ -1,41 +1,63 @@
 $(function() {
-   	$('.with-sub-menu span').on('click', function() {
-       $(this).siblings('ul').slideToggle();
-   	});
+	//hide menu
+	$('.hidden button').on('click', function() {
+ 		$('.hidden').slideUp();
+ 	});
+ 	$('.products-menu').on('click', function() {
+ 		$('.hidden').slideDown();
+ 	});
 
-   	$('button').click(function() {
-  		$(this).toggleClass('expanded').siblings('div').slideToggle();
+ 	//mobile menu
+	$('.toggle-menu').jPushMenu();
+
+	// arrowDown
+    $("#menu").on("click","a", function (event) {	
+		event.preventDefault();
+		var id  = $(this).attr('href'),
+			top = $(id).offset().top;
+		$('body,html').animate({scrollTop: top}, 1500);
 	});
 
+	//first slider
   	$("#slider2").responsiveSlides({
-        auto: true,
+        auto: false,
         pager: true,
         timeout: 4000,
         speed: 300,
     });
 
-  	var modal = document.getElementById('myModal');
+  	//second slider
+     $(".content").mCustomScrollbar({
+		theme:"minimal"
+	});
 
-	// Get the button that opens the modal
-	var btn = document.getElementById("myBtn");
+     //products sub menu
 
-	// Get the <span> element that closes the modal
-	var span = document.getElementsByClassName("close")[0];
-
-	// When the user clicks the button, open the modal 
-	btn.onclick = function() {
-	    modal.style.display = "block";
-	}
-
-	// When the user clicks on <span> (x), close the modal
-	span.onclick = function() {
-	    modal.style.display = "none";
-	}
-
-	// When the user clicks anywhere outside of the modal, close it
-	window.onclick = function(event) {
-	    if (event.target == modal) {
-	        modal.style.display = "none";
-	    }
-	}
+   	$('.with-sub-menu').on('click', function() {
+       	$(this)
+       		.toggleClass('active-li')
+       		.find('>ul').slideToggle();
+       		
+       		$(this).find('.ui-arrow').toggleClass("active-ui-arrow");
+   	});
+	
+   	//triggers
+	var h = $(window).height();
+	$(window).scroll(function(){
+		if ( ($(this).scrollTop()+h) >= $("#ex4").offset().top) {
+			$("#ex4 .trigger-item").css({visibility:"visible"});
+			$("#ex4 .trigger-item").addClass('animated zoomIn');
+		} 
+		
+		if ( $(this).scrollTop() == 0 ) {
+			$("#ex4 .trigger-item").each(function(){
+				if ( $(this).hasClass('last') ) {
+					$(this).removeClass().addClass('trigger-item last');
+				} else {
+					$(this).removeClass().addClass('trigger-item');
+				}
+				$(this).css({visibility:"hidden"});
+			});
+		}
+	});
 });

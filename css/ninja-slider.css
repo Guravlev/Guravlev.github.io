@@ -1,0 +1,175 @@
+/* Visit http://www.menucool.com/responsive-slider for instructions */
+
+#ninja-slider {
+    width:100%;
+    /*min-width:375px;
+    background:#191919;*/
+    padding: 30px 0;
+
+    margin:0 auto;
+    overflow:hidden;
+    box-sizing:border-box;
+}
+
+#ninja-slider .slider-inner {
+    margin:0 auto;/*center-aligned */
+    font-size:0px;
+    position:relative;
+}
+
+#ninja-slider ul {
+    /*background-color:black;*/
+    position:relative;
+    list-style:none;
+    padding:0;
+}
+
+#ninja-slider li {    
+    width:100%;
+    top:0;
+    left:0;
+    position: absolute;
+    font-size:12px;
+    list-style:none;
+    margin:0;
+    padding:0;
+    opacity:0;
+    overflow:hidden;
+    transform-style: preserve-3d; /*prevent blurry of its children*/
+}
+
+#ninja-slider li.ns-show {
+    opacity:1;
+}
+
+
+/*---------- Slide Content -------------------*/
+#ninja-slider div.content {
+    font-family: 'Raleway', sans-serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-align:left;
+    color:#FFF;
+    line-height:1.2;
+    position: relative;
+    top: 10%;
+    box-sizing:border-box;
+}
+
+#ninja-slider div.content h3 {
+    color:#E56606;
+    margin-top:0;
+    margin-bottom:30px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 13px;
+    font-weight:900;
+}
+#ninja-slider div.content img {
+    float:right;
+    width: 57%;
+    margin:5px 2px 20px 5px;
+}
+
+/* ---------Arrow buttons ------- */   
+/* The arrow button id should be: slider id + ("-prev", "-next", and "-pause-play") */ 
+#ninja-slider-pause-play { display:none;}    
+
+#ninja-slider-prev, #ninja-slider-next
+{
+    position: absolute;
+    display: inline-block;
+    width: 22%;
+    height: 70px;
+    top: 1%;
+    backface-visibility: hidden;
+    overflow: hidden;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    z-index: 10;
+    font-family: sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    -webkit-transition: all 0.7s;
+    transition: all 0.4s;
+}
+
+.slider-inner:hover #ninja-slider-prev, .slider-inner:hover #ninja-slider-next {
+    opacity:1;
+}
+
+
+#ninja-slider-prev {
+    left: 0px;
+     width: 16%; /*set it with a positive value if .slider-inner does not have max-width setting.*/
+}
+#ninja-slider-next {
+    right: 74%;
+}
+
+/* arrows */
+#ninja-slider-prev::before, #ninja-slider-next::before {
+    position: absolute;
+    top: 17px;
+    content: "";
+    display: inline-block;
+    width: 37px;
+    height: 37px;
+    border-left: 5px solid #7f7f7f;
+    border-top: 5px solid #7f7f7f;
+    backface-visibility:hidden;
+}
+
+#ninja-slider-prev::before {
+    -ms-transform:rotate(-45deg);/*IE 9*/
+    -webkit-transform:rotate(-45deg);
+    transform: rotate(-45deg);
+    left:14px;
+}
+
+#ninja-slider-next::before {
+    -ms-transform:rotate(135deg);/*IE 9*/
+    -webkit-transform:rotate(135deg);
+    transform: rotate(135deg);
+    right:14px;
+}
+
+
+/*pagination num within the arrow buttons*/
+#ninja-slider-prev div {white-space: nowrap; opacity: 1; text-align: right; height: 100%; font-size: 76px; color: #66a1bd;}
+#ninja-slider-next div {margin-left:8px;white-space:nowrap;opacity:0;float:left;}
+
+
+
+/*------ pager(nav bullets) ------*/      
+/* The pager id should be: slider id + "-pager" */
+#ninja-slider-pager { display:none;}
+
+/*Responsive settings*/
+@media only screen and (max-width:700px){
+
+    #ninja-slider div.content {
+        font-size:1em;
+    }
+    
+    #ninja-slider div.content h3 {
+        font-size:2em;
+    }
+
+    // #ninja-slider div.content img {
+    //     display:none;
+    // }
+    // #ninja-slider-prev, #ninja-slider-next {
+    //     display:none;
+    // }
+}
+    #ninja-slider-prev, #ninja-slider-next {
+        width: 16%;
+    }
+    #ninja-slider-prev div {
+        font-size: 48px;
+        padding-top: 13px;
+    }
+    #ninja-slider-next {
+        right: 74%;
+    }
+
