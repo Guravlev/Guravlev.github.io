@@ -1,0 +1,210 @@
+
+
+/*Large Device, Wide screen*/
+@media only screen and (max-width: 1200px){
+}
+/*Medium Device, Desktop*/
+@media only screen and (max-width: 992px){
+.navigation-wrapper li a{
+    font-size: 13px;
+    padding: 0px 25px;
+}
+.modal {
+    padding-left: 0px;
+}
+.modal-content {
+    width: 50%;
+}
+.item:nth-child(3n + 2) {
+     margin: 0; 
+}
+.item:nth-child(2n+1) {
+	margin: 0 18px 18px 0;
+}
+.footer-menu a {
+    padding: 0px 0px 0 30px;
+}
+}
+/*Small Device, Tablets*/
+@media only screen and (max-width: 769px){
+.container {
+    max-width: 768px;
+}
+.logo-wrapper {
+	float: none;
+    text-align: center;
+}
+.contact-us{
+	float: none;
+    text-align: center;
+    margin-top: 15px;
+}
+.left-block {
+	float: none;
+    width: 100%;
+   	text-align: center;
+    padding-right: 0px;
+}
+.file span {
+    position: relative;
+}
+.navigation-wrapper {
+    padding: 20px 0 16px;
+    text-align: center;
+}
+.navigation-wrapper li {
+	display: block;
+	margin-bottom:  10px;
+}
+.navigation-wrapper a {
+	display: block;
+	padding-bottom: 8px
+}
+.navigation-wrapper li:not(:last-child):after{
+	content: none;
+}
+.modal-content {
+    width: 75%;
+}
+.item:nth-child(2n){
+	margin: 0px 0px 18px 0;
+}
+.item:nth-child(2n+1){
+	margin: 0px 0px 18px 0;
+}
+.description-conteiner {
+    width: 100%;
+    line-height: 1;
+    margin-bottom: 40px;
+}
+.copy {
+	padding: 0 0px 0 68px;
+}
+.footer-wrapper{
+    padding-right: 30px;
+}
+.footer-menu a {
+    display: block;
+}
+}
+/*Extra Small Device, Phones*/
+@media only screen and (max-width: 480px){
+.container {
+    max-width: 480px;
+}
+.contact-us > div {
+    display: block; 
+}
+.modal-content {
+    width: 90%;
+}
+.modal-header {
+    padding: 8px 0px;
+    font-size: 22px;
+}
+.modal-fields {
+    padding: 0px 67px 2px 63px;
+}
+textarea {
+    height: 280px;
+}
+.logo-wrapper {
+	float: none;
+    text-align: center;
+}
+.contact-us{
+	float: none;
+    text-align: center;
+    margin-top: 15px;
+}
+.left-block {
+	float: none;
+    width: 100%;
+   	text-align: center;
+    padding-right: 0px;
+}
+.file span {
+    position: relative;
+}
+.item{
+	width: 280px;
+}
+.item-container p {
+    font-size: 13px;
+}
+.item-container span {
+    font-size: 21px;
+}
+.pagination li {
+    padding: 0px 7px 0px 3px;
+}
+.description-conteiner {
+	width: 100%;
+    line-height: 1;
+    margin-bottom: 40px;
+}
+.description {
+    padding: 33px 0px 25px 0;
+}
+.feedback-wrapper button {
+    margin: 16px 13px 0;
+}
+.copy {
+    padding: 0px 0px 0 25px;
+    width: 40%;
+}
+.footer-wrapper {
+    padding-right: 0px;
+    font-size: 12px;
+    width: 50%;
+}
+.footer-menu a {
+    display: block;
+}
+.mobile {
+    display: block;
+}
+.desktop {
+    display: none;
+}
+}
+/*Custom, iPhones Retina*/
+@media only screen and (max-width: 320px){
+.modal-content {
+    width: 100%;
+}
+.logo-wrapper {
+	float: none;
+    text-align: center;
+}
+.contact-us{
+	float: none;
+    text-align: center;
+    margin-top: 15px;
+}
+.left-block {
+    width: 100%;
+    text-align: center;
+}
+.center-block {
+    float: right;
+}
+.file {
+    padding: 25px 0px;
+}
+.file span {
+    position: relative;
+}
+.copy {
+    padding: 0;
+    width: 50%;
+}
+.footer-wrapper {
+    padding-right: 0px;
+    font-size: 12px;
+    width: 50%;
+}
+.footer-menu a {
+    padding:0; 
+}
+}

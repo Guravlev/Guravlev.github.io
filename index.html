@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Code It</title>
+
+    <!-- <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css' /> -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsiveslides.css" />
+    <link rel="stylesheet" href="css/media.css" />
+</head>
+<body>
+    <!-- Header -->
+    <header> 
+        <div class="header-top">
+            <div class="container">
+                <div class="logo-wrapper pull-left">
+                    <a href="#">
+                        <img src="images/logo.png" width="200" height="47" alt="codeit">
+                    </a>
+                </div>
+                <div class="contact-us pull-right">
+                    <div class="phone">
+                        <a href="tel:+1234567890">+3 (050) 777 77 77</a>
+                        <a href="tel:+1234567890">+3 (050) 777 77 77</a>
+                    </div>
+                    <div class="feedback-wrapper">
+                        <button id="myBtn" type="button" class="feedback">Feedback</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+          <!-- Modal content -->
+            <div class="modal-content">
+                <form action="" method="post" name="test" id="form" >
+                    <span class="close"></span>
+                    <div class="modal-header">
+                        <p>Feedback</p>
+                    </div>
+                    <div class="modal-body">
+                        <div class="modal-fields">
+                            <label for="fName">Name <span>*</span></label><br />
+                            <input type="text" class="rfield" name="fName" id="fName" required pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$"/>
+                        </div>
+
+                        <div class="modal-fields">
+                            <label for="Phone">Phone<span>*</span></label><br />
+                            <input type="text" class="rfield" name="lName" id="Phone" required pattern="^(?:0|\(?\+33\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}$" />
+                        </div>
+                        <div class="modal-fields">
+                            <label for="email">Email<span>*</span></label><br />
+                            <input type="mail" class="rfield" name="email" id="emeil" required pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$" /> 
+                        </div>
+                        <div class="modal-fields comment">
+                            <label for="text">Text</label><br />
+                            <textarea name="text" class="rfield"></textarea><br />
+                        </div>
+                            <input type="submit" class="btn_submit disabled" value="Submit" />
+                    </div>
+                </form>
+            </div>  
+        </div>
+        <div class="navigation-wrapper">
+            <nav class="container desktop">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Catalog</a></li>
+                    <li><a href="#">Shipping and payment</a></li>
+                    <li><a href="#">Price</a></li>
+                    <li><a href="#">Contacts</a></li>
+                </ul>
+            </nav>
+            <nav class="mobile">
+                <button></button>
+                <div>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Catalog</a></li>
+                        <li><a href="#">Shipping and payment</a></li>
+                        <li><a href="#">Price</a></li>
+                        <li><a href="#">Contacts</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="slider">
+        <ul class="rslides" id="slider2">
+            <li><a href="#"><img src="images/slide1.png" alt=""></a></li>
+            <li><a href="#"><img src="images/slide1.png" alt=""></a></li>
+            <li><a href="#"><img src="images/slide1.png" alt=""></a></li>
+        </ul>
+    </div>
+    <div class="breadcrumbs">
+        <ul class="container">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Catalog</a></li>
+            <li>Category Name</li>
+        </ul>
+    </div>
+    <div class="main-wrapper container">
+        <div class="left-block">
+            <nav>
+                <ul>
+                    <li><a href="">Cars</a></li>
+                    <li class="with-sub-menu">
+                        <span>Household Appliances</span>
+                        <ul class="sub-menu">
+                            <li><a href="">Microwaves</a></li>
+                            <li><a href="">Fridges</a></li>
+                            <li><a href="">Посудомоечные машины</a></li>
+                            <li><a href="">Dishwashers</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Mobile Equipment</a></li>
+                    <li><a href="">Computers</a></li>
+                    <li><a href="">Clothing</a></li>
+                    <li><a href="">Real Estate</a></li>
+                </ul>
+            </nav>
+            <div class="file"><a href="#"><img src="images/file.png" alt=""><span>Price List</span></a></div>
+        </div>
+        <div class="center-block">
+            <div class="content-slider">
+                <div class="contant-slide">
+                    <div class="item">
+                        <div class="item-container">
+                            <div>
+                                <img src="images/products.png" alt="">
+                                <p>Lorem ipsum dolor sit amet, consectetur doler adipiscing elit.</p>
+                            </div>
+                            <div class="price-block">
+                                <div class="price">
+                                    <span>$</span>
+                                    <span>550.95</span>
+                                </div>
+                                <div class="cart">
+                                    <a href="#" class="add-to-cart"><img src="images/addToCart.png" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-container">
+                            <div>
+                                <img src="images/products.png" alt="">
+                                <p>Lorem ipsum dolor sit amet, consectetur doler adipiscing elit.</p>
+                            </div>
+                            <div class="price-block">
+                                <div class="price">
+                                    <span>$</span>
+                                    <span>350.95</span>
+                                </div>
+                                <div class="cart">
+                                    <a href="#" class="add-to-cart"><img src="images/addToCart.png" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-container">
+                            <div>
+                                <img src="images/products.png" alt="">
+                                <p>Lorem ipsum dolor sit amet, consectetur doler adipiscing elit.</p>
+                            </div>
+                            <div class="price-block">
+                                <div class="price">
+                                    <span>$</span>
+                                    <span>850.95</span>
+                                </div>
+                                <div class="cart">
+                                    <a href="#" class="add-to-cart"><img src="images/addToCart.png" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-container">
+                            <div>
+                                <img src="images/products.png" alt="">
+                                <p>Lorem ipsum dolor sit amet, consectetur doler adipiscing elit.</p>
+                            </div>
+                            <div class="price-block">
+                                <div class="price">
+                                    <span>$</span>
+                                    <span>550.95</span>
+                                </div>
+                                <div class="cart">
+                                    <a href="#" class="add-to-cart"><img src="images/addToCart.png" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-container">
+                            <div>
+                                <img src="images/products.png" alt="">
+                                <p>Lorem ipsum dolor sit amet, consectetur doler adipiscing elit.</p>
+                            </div>
+                            <div class="price-block">
+                                <div class="price">
+                                    <span>$</span>
+                                    <span>350.95</span>
+                                </div>
+                                <div class="cart">
+                                    <a href="#" class="add-to-cart"><img src="images/addToCart.png" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-container">
+                            <div>
+                                <img src="images/products.png" alt="">
+                                <p>Lorem ipsum dolor sit amet, consectetur doler adipiscing elit.</p>
+                            </div>
+                            <div class="price-block">
+                                <div class="price">
+                                    <span>$</span>
+                                    <span>850.95</span>
+                                </div>
+                                <div class="cart">
+                                    <a href="#" class="add-to-cart"><img src="images/addToCart.png" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pagination">
+                <ul>
+                    <li><a href="">1</a></li>
+                    <li><a href="">2</a></li>
+                    <li><a href="">3</a></li>
+                    <li><a href="">4</a></li>
+                    <li><a href="">5</a></li>
+                    <li><a href="">6</a></li>
+                    <li><a href="">7</a></li>
+                </ul>
+            </div>
+             <section class="container description">
+                <div  class="description-conteiner pull-left">  
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper lacinia auctor. Aliquam vitae mi ornare, tincidunt risus sed, euismod nisl. Nullam imperdiet nisi ut est imperdiet posuere. Cras sodales molestie enim eget porta. Vestibulum scelerisque blandit pulvinar. Donec condimentum malesuada neque a blandit. In sodales ex ac pharetra dictum. In interdum facilisis justo. Maecenas sit amet mi vitae purus ultrices fermentum. In vel orci erat. Suspendisse potenti. Donec arcu nunc, imperdiet id neque nec, mollis viverra nisl. Fusce egestas ligula vitae tristique dignissim.</p>
+                </div>
+                <div class="description-conteiner pull-right">  
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper lacinia auctor. Aliquam vitae mi ornare, tincidunt risus sed, euismod nisl. Nullam imperdiet nisi ut est imperdiet posuere. Cras sodales molestie enim eget porta. Vestibulum scelerisque blandit pulvinar. Donec condimentum malesuada neque a blandit. In sodales ex ac pharetra dictum. In interdum facilisis justo. Maecenas sit amet mi vitae purus ultrices fermentum. In vel orci erat. Suspendisse potenti. Donec arcu nunc, imperdiet id neque nec, mollis viverra nisl. Fusce egestas ligula vitae tristique dignissim.</p>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="main-footer container">
+        <div class="copy pull-left">
+             <span>© CodeIT 2012–2013,</br>
+                All Rights Reserved. 
+            </span>
+        </div>
+        <div class="footer-wrapper pull-right">
+            <nav class="footer-menu">
+                <a href="#">Home</a>
+                <a href="#">Catalog</a>
+                <a href="#">Shipment and payment</a>
+                <a href="#">Price</a>
+                <a href="#">Contacts</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/responsiveslides.js"></script>
+</body>
+</html>
